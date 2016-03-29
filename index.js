@@ -8,7 +8,7 @@ module.exports = nconf;
 
 module.exports.load = () => {
   const env = process.env.NODE_ENV || 'development';
-  const configDir = process.env.NODE_CONFIG_DIR || `${__dirname}/../..`;
+  const configDir = process.env.NODE_CONFIG_DIR || `${__dirname}/../../..`;
   const configFile = process.env.NODE_CONFIG_FILE;
 
   assert(fs.existsSync(configDir), `${configDir} does not seem to exist`);
