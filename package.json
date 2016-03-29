@@ -1,0 +1,36 @@
+{
+  "name": "@ahmdigital/config",
+  "version": "1.0.0",
+  "description": "",
+  "author": "ahm",
+  "license": "UNLICENSED",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmdigital/ahm-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ahmdigital/ahm-config/issues"
+  },
+  "homepage": "https://github.com/ahmdigital/ahm-config",
+  "scripts": {
+    "test": "mocha -R spec --recursive",
+    "lint": "eslint -c .eslintrc .",
+    "release:major": "npm run lint && npm test && npm version major && npm publish && git push --follow-tags",
+    "release:minor": "npm run lint && npm test && npm version minor && npm publish && git push --follow-tags",
+    "release:patch": "npm run lint && npm test && npm version patch && npm publish && git push --follow-tags"
+  },
+  "dependencies": {
+    "dotenv": "2.0.0",
+    "nconf": "^0.8.4"
+  },
+  "devDependencies": {
+    "eslint": "^2.4.0",
+    "eslint-config-airbnb": "^6.1.0",
+    "eslint-plugin-react": "^4.2.3",
+    "mocha": "^2.4.5"
+  },
+  "engines": {
+    "node": "^4.2"
+  }
+}
