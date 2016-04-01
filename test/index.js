@@ -19,4 +19,10 @@ describe('ahm-config', () => {
     const config = require('../');
     assert.equal(config.get('a'), 1);
   });
+
+  it('should set defaults', () => {
+    const config = require('../');
+    assert.equal(config.get('NODE_ENV'), 'staging'); // overriden above
+    assert.equal(config.get('PORT'), 3000);
+  });
 });

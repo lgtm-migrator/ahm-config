@@ -28,13 +28,15 @@ module.exports.load = () => {
    *   2. Command line arguments (process.argv)
    *   3. Custom config (if provided)
    *   4. Environment specific config 'config.<env>.json'
-   *   5. Default values
+   *   5. User-specified default values
+   *   6. System defaults
    */
   nconf.env('__')
     .argv()
     .file('local', configFile || `${configDir}/config.local.json`)
     .file(env, `${configDir}/config.${env}.json`)
-    .file('default', `${configDir}/config.default.json`);
+    .file('default', `${configDir}/config.default.json`)
+    .defaults({ PORT: 3000, NODE_ENV: 'development' });
 
   return nconf;
 };
