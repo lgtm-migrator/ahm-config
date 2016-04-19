@@ -20,7 +20,7 @@ module.exports.load = (opts) => {
   // This is just for backward compatibility with dotenv.
   // In fact, values loaded from .env files by dotenv are available
   // in nconf as well.
-  require('dotenv').config({ path: `${configDir}/.env` });
+  require('dotenv').config({ silent: true, path: `${configDir}/.env` });
 
   /**
    * Setup configuration with nconf in the following order:
