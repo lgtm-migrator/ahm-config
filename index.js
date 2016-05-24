@@ -3,10 +3,8 @@ const fs = require('fs');
 const nconf = require('nconf');
 
 
-module.exports = nconf;
-
-
-module.exports.load = (opts) => {
+exports.make = (opts) => {
+  const store = new nconf.Provider;
   const env = process.env.NODE_ENV || 'development';
   const configDir = process.env.NODE_CONFIG_DIR || opts.path || `${__dirname}/../../..`;
   const configFile = process.env.NODE_CONFIG_FILE;
@@ -31,12 +29,12 @@ module.exports.load = (opts) => {
    *   5. User-specified default values
    *   6. System defaults
    */
-  nconf.env('__')
+  store.env('__')
     .argv()
     .file('local', configFile || `${configDir}/config.local.json`)
     .file(env, `${configDir}/config.${env}.json`)
     .file('default', `${configDir}/config.default.json`)
     .defaults({ PORT: 3000, NODE_ENV: 'development' });
 
-  return nconf;
+  return store;
 };
