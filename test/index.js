@@ -7,7 +7,7 @@ describe('ahm-config', () => {
   process.env.NODE_CONFIG_FILE = `${__dirname}/data/config.override.json`;
   process.env.e = 55555;
 
-  it('should return proper config value from hierachy', () => {
+  it('should return proper config values from hierarchy', () => {
     const store = config.make();
     assert.equal(store.get('a'), 1, 'Value should be taken from default config');
     assert.equal(store.get('b'), 22, 'Value should be taken from staging config');
