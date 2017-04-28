@@ -2,6 +2,7 @@
 
 Config management module. It uses [nconf](https://github.com/indexzero/nconf) under the bonnet to manage config files, environment variables as a single system. It aims to simplify system configuration and config management.
 
+
 ### Installation
 
 ```shell
