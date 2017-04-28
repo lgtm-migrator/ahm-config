@@ -10,7 +10,7 @@ $ npm i @ahmdigital/config
 
 ### Usage
 
-```
+```javascript
 const config = require('@ahmdigital/config');
 
 module.exports = config.make({ path: `${__dirname}/..` });
