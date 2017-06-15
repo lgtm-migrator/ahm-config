@@ -16,6 +16,18 @@
           "required": true
         }
       }
+    },
+    "gg": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "arr_test":{
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     }
   },
   "required": true,
