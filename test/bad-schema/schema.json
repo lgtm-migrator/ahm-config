@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "NODE_ENV": { "required": true, "type": "string" },
+    "/a": { "required": true, "type": "integer", "minimum": 1 },
+    "$x": { "required": true, "type": "string", "minimum": 1 }    
+  },
+  "required": true,
+  "additionalProperties": false
+}
