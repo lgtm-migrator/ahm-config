@@ -6,7 +6,7 @@ describe('ahm-config: validate-keys', () => {
     const data = { a: { '/test': true } };
     assert.deepEqual(validateKeys(data), [{
       field: 'a./test',
-      message: 'Has wrong characters in it',
+      message: 'Has special characters in it (/^[a-z0-9_-]+$/i are allowed)',
       value: 'a./test',
       type: 'string',
     }]);
