@@ -8,6 +8,7 @@ describe('ahm-config: basic', () => {
     process.env.NODE_CONFIG_FILE = `${__dirname}/basic/override.config.json`;
     process.env.e = 55555;
     process.env.g = 666666;
+    process.env.arr_test = '["test", "test2"]';
     process.env.f__baz = 'Should not be shared';
   });
 
@@ -29,6 +30,7 @@ describe('ahm-config: basic', () => {
     assert.equal(store.get('d'), 444, 'Value should NOT be taken from .env file');
     assert.equal(store.get('e'), 55555, 'Value should be taken from env variables');
     assert.equal(store.get('g'), undefined, 'Value should not be taken from env vars');
+    assert.deepEqual(store.get('arr_test'), ['test', 'test2'], 'Value should be taken from env vars');
   });
 
   it('should support isolated stores', () => {
