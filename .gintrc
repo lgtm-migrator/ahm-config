@@ -1,0 +1,7 @@
+{
+  "rules": {
+    "commit-message-pattern": ["error", "^\\[(patch|minor|major)\\]\\s.{3,}", "i"],
+    "commit-min-len": ["error", 10],
+    "commit-max-len": ["error", 512]
+  }
+}
