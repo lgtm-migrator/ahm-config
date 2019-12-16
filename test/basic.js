@@ -1,4 +1,5 @@
 const assert = require('assert');
+
 const config = require('../lib');
 const schema = require('../lib/schema');
 const defaultSchema = require('./bad-schema/schema.json');
@@ -34,7 +35,6 @@ describe('ahm-config: basic', () => {
       assert.equal(pattern.test('multyKeyProp__test2__prop11'), false);
     });
   });
-
 
   it('should return proper config values from hierarchy', () => {
     const store = config.make();

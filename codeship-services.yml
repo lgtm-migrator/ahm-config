@@ -1,0 +1,5 @@
+ahm-config:
+  build:
+    image: ahm-config
+    dockerfile: Dockerfile
+  cached: true

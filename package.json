@@ -2,8 +2,8 @@
   "name": "@ahmdigital/config",
   "version": "7.2.3",
   "description": "",
-  "author": "ahm",
-  "license": "UNLICENSED",
+  "author": "ahm digital",
+  "license": "MIT",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
@@ -15,7 +15,7 @@
   "homepage": "https://github.com/ahmdigital/ahm-config",
   "scripts": {
     "test": "mocha -R spec --recursive",
-    "lint": "eslint -c .eslintrc .",
+    "lint": "eslint .",
     "release": "scripts/release"
   },
   "dependencies": {
@@ -25,10 +25,7 @@
     "traverse": "^0.6.6"
   },
   "devDependencies": {
-    "eslint": "5.16.0",
-    "eslint-config-airbnb-base": "11.2.0",
-    "eslint-plugin-import": "2.18.2",
-    "eslint-plugin-jsdoc": "7.2.3",
+    "@ahmdigital/eslint-config": "3.0.27",
     "gint": "0.9.2",
     "mocha": "5.2.0"
   },
@@ -36,8 +33,5 @@
     "extends": [
       "@ahmdigital"
     ]
-  },
-  "engines": {
-    "node": ">=8"
   }
 }

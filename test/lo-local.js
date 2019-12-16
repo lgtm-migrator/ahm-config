@@ -1,4 +1,5 @@
 const assert = require('assert');
+
 const config = require('../lib');
 
 describe('ahm-config: no-local', () => {
