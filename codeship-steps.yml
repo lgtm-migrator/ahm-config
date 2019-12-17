@@ -8,5 +8,5 @@
 
 - name: Release
   service: ahm-config
-  command: npm run release
+  command: npx -p @ahmdigital/devops release
   tag: master
