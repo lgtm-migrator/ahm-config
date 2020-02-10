@@ -1,6 +1,6 @@
 {
   "name": "@ahmdigital/config",
-  "version": "7.2.3",
+  "version": "7.2.3-1",
   "description": "",
   "author": "ahm",
   "license": "UNLICENSED",
@@ -38,6 +38,6 @@
     ]
   },
   "engines": {
-    "node": ">=8"
+    "node": "10.6.3"
   }
 }
