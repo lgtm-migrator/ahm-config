@@ -1,4 +1,4 @@
-ahm-config:
+build-service:
   build:
     image: ahm-config
     dockerfile: Dockerfile

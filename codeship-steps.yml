@@ -1,32 +1,32 @@
-- name: Lint
-  service: ahm-config
-  command: npm run lint
-
-- name: Test
-  service: ahm-config
-  command: npm run test
+- name: Lint & Test
+  type: parallel
+  steps:
+  - service: build-service
+    command: npm run lint
+  - service: build-service
+    command: npm run test --nowatch
 
 - name: Reinstate SSH Private Key File
-  service: ahm-config
+  service: build-service
   tag: master
   command: /bin/bash -c "echo -e $PRIVATE_SSH_KEY >> /root/.ssh/id_rsa"
 
 - name: Chmod id_rsa
-  service: ahm-config
+  service: build-service
   tag: master
   command: chmod 600 /root/.ssh/id_rsa
 
 - name: Add server to list of known hosts
-  service: ahm-config
+  service: build-service
   tag: master
   command: /bin/bash -c "ssh-keyscan -H github.com >> /root/.ssh/known_hosts"
 
 - name: Confirm ssh connection to server, authenticating with generated public ssh key
-  service: ahm-config
+  service: build-service
   tag: master
   command: /bin/bash -c "ssh -o StrictHostKeyChecking=no -Tvv git@github.com 2>&1 | grep 'successfully authenticated'"
 
 - name: Run DevOps release scripts
   tag: master
-  service: ahm-config
+  service: build-service
   command: npx -p @ahmdigital/devops release

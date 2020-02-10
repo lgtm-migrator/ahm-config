@@ -8,5 +8,5 @@ Thumbs.db
 *.swp
 *.swo
 *.swn
-codeship-env
-codeship.aes
+*.decrypted
+*.aes
