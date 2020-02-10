@@ -1,0 +1,9 @@
+build-service:
+  build:
+    image: ahm-config
+    dockerfile: Dockerfile
+  encrypted_env_file:
+    - codeship-env.encrypted
+  volumes:
+    - ./.ssh:/root/.ssh
+  cached: true

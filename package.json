@@ -1,6 +1,6 @@
 {
   "name": "@ahmdigital/config",
-  "version": "7.2.3",
+  "version": "7.2.3-1",
   "description": "",
   "author": "ahm",
   "license": "UNLICENSED",
@@ -19,8 +19,8 @@
     "release": "scripts/release"
   },
   "dependencies": {
-    "jsonschema": "^1.1.1",
-    "lodash": "^4.16.6",
+    "jsonschema": "^1.2.5",
+    "lodash": "^4.17.15",
     "nconf": "^0.8.4",
     "traverse": "^0.6.6"
   },
@@ -38,6 +38,6 @@
     ]
   },
   "engines": {
-    "node": ">=8"
+    "node": "10.6.3"
   }
 }
